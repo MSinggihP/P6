@@ -1,0 +1,77 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int angka;
+    int puluhan;
+
+    cout<<"Masukan Angka : ";
+    cin>>angka;
+
+    cout<<"Angka Romawi  : ";
+
+    puluhan=angka/10;
+    if(puluhan!=0){
+       if(puluhan<=3){
+            puluhan=1;
+    }
+       else if(puluhan<=8){
+            puluhan=5;
+          }
+        else if(puluhan>=10){
+            puluhan=10;
+        }
+    }
+
+    switch(puluhan){
+        case 1:
+            cout<<"X";
+            angka=angka-10;
+            break;
+        case 4:
+            cout<<"XL";
+            angka=angka-40;
+            break;
+        case 5:
+            cout<<"L";
+            angka=angka-50;
+            break;
+        case 9:
+            cout<<"XC";
+            angka=angka-90;
+            break;
+        case 10:
+            cout<<"C";
+            angka=angka-100;
+            break;
+    }
+
+    while(angka>=10){
+        cout<<"X";
+        angka=angka-10;
+    }
+
+    if(angka>=5){
+        if(angka==9){
+            cout<<"IX";
+            angka=angka-9;
+        }else{
+            cout<<"V";
+            angka=angka-5;
+        }
+    }
+
+    while(angka>=1){
+        if(angka==4){
+            cout<<"IV";
+            angka=angka-4;
+        }else{
+            cout<<"I";
+            angka=angka-1;
+        }
+    }
+
+cout<<endl;
+return 0;
+}
