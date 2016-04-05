@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    int tes,uts,uas,tugas,nilai_akhir;
+    char indeks;
+
+    cout<<"Masukan Nilai TES   : ";
+    cin>>tes;
+    cout<<"Masukan Nilai UTS   : ";
+    cin>>uts;
+    cout<<"Masukan Nilai UAS   : ";
+    cin>>uas;
+    cout<<"Masukan Nilai TUGAS : ";
+    cin>>tugas;
+
+    nilai_akhir=(0.2*tes)+(0.3*uts)+(0.3*uas)+(0.2*tugas);
+
+    if(nilai_akhir<=50){
+        indeks='D';
+    }else if((nilai_akhir<=70)&&(nilai_akhir>50)){
+        indeks='C';
+    }else if((nilai_akhir<=80)&&(nilai_akhir>70)){
+        indeks='B';
+    }else{indeks='A';}
+
+    cout<<endl<<"Nilai  : "<<nilai_akhir;
+    cout<<endl<<"Indeks : "<<indeks<<endl;
+
+return 0;
+}
